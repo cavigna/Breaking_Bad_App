@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_menu"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home">
+    </item>
+
+    <item
+        android:id="@+id/personajes_menu"
+        android:icon="@drawable/ic_baseline_people_alt_24"
+        android:title="@string/personajes">
+    </item>
+
+    <item
+        android:id="@+id/quotes_menu"
+        android:icon="@drawable/ic_baseline_format_quote_24"
+        android:title="@string/frases">
+    </item>
+
+    <item
+        android:id="@+id/muertes_menu"
+        android:icon="@drawable/ic_tombstone"
+        android:iconTint="@color/white"
+        android:title="@string/muertes">
+
+    </item>
+
+</menu>
