@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home_menu-> navController.navigate(R.id.homeFragment)
                 R.id.personajes_menu-> navController.navigate(R.id.personajesFragment)
+                R.id.quotes_menu-> navController.navigate(R.id.quotesFragment)
+                R.id.muertes_menu -> navController.navigate(R.id.muertesFragment)
 
             }
             true

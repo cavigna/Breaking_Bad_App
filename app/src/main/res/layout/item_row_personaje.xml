@@ -11,7 +11,7 @@
         android:id="@+id/card_personaje_row"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="1dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,15 +23,15 @@
             android:layout_height="match_parent"
             android:background="@color/french_beige">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageView_row"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_margin="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+                app:srcCompat="@drawable/ic_breaking_bad_logo" />
 
             <TextView
                 android:id="@+id/tv_nombre_row"

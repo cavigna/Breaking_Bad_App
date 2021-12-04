@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.asLiveData
 import coil.load
+import coil.transform.RoundedCornersTransformation
 import com.example.breakingbadapp.R
 import com.example.breakingbadapp.app.BbApp
 import com.example.breakingbadapp.databinding.FragmentHomeBinding
@@ -46,8 +47,10 @@ class HomeFragment : Fragment() {
         viewModel.personajeRandom.observe(viewLifecycleOwner, {
             with(binding){
 
-              //  imagePersonajeHome.load(it.img)
-               // tvNombrePersonajeHome.text = it.name
+                imagePersonajeHome.load(it.img){
+                    transformations(RoundedCornersTransformation(10f))
+                }
+                tvNombrePersonajeHome.text = it.name
                 try {
 
                 }catch (e: NullPointerException){}

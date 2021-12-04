@@ -1,12 +1,14 @@
 package com.example.breakingbadapp.listadapters
 
 import android.view.LayoutInflater
+import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.transform.RoundedCornersTransformation
 import com.example.breakingbadapp.databinding.ItemRowPersonajeBinding
 import com.example.breakingbadapp.model.Personaje
 
@@ -19,7 +21,9 @@ class PersonajeListAdapter(): ListAdapter<Personaje, PersonajeViewHolder>(Person
         val personaje = getItem(position)
 
         with(holder.binding){
-            imageViewRow.load(personaje.img)
+            imageViewRow.load(personaje.img){
+                transformations(RoundedCornersTransformation(10f))
+            }
             tvNombreRow.text = personaje.name
         }
     }

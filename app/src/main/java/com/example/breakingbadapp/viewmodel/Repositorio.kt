@@ -18,7 +18,9 @@ class Repositorio(private val api: ApiService, private val dao: BbDao) {
     }
 
      fun fraseRandom(id:Int = (1..102).random()) = dao.randomQuote(id)
-     fun personajeRandmom(id:Int = (1..62).random()) = dao.personajeRandom(id)
+     fun personajeRandmom(id:Int = (2..62).random()) = dao.personajeRandom(id)
 
     fun listadoPersonajes() = dao.listadoPersonajes()
+    fun listadoFrases() = dao.listadoFrases()
+    fun listadoMuertes() = dao.listadoMuertes()
 }

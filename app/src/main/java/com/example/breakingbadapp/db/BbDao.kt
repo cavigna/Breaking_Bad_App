@@ -19,6 +19,9 @@ interface BbDao {
     @Query("SELECT * FROM quotes_tabla where id=:id")
     fun randomQuote(id: Int): Flow<Quotes>
 
+    @Query("SELECT * FROM quotes_tabla")
+    fun listadoFrases(): Flow<List<Quotes>>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun agregarListadoPersonajes(listadoFrases : List<Personaje>)
 

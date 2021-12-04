@@ -6,8 +6,12 @@
         <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/drawable/ic_tombstone.xml" value="0.32864583333333336" />
         <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/activity_main.xml" value="0.5411458333333333" />
         <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/fragment_muertes.xml" value="0.31614583333333335" />
         <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/fragment_personajes.xml" value="0.5411458333333333" />
-        <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/item_row_personaje.xml" value="0.5411458333333333" />
+        <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/fragment_quotes.xml" value="0.340625" />
+        <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/item_row_death.xml" value="0.6" />
+        <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/item_row_personaje.xml" value="0.6666666666666666" />
+        <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/layout/item_row_quote.xml" value="0.6666666666666666" />
         <entry key="..\:/Proyectos_Android/BreakingBadApp/app/src/main/res/menu/menu_bb.xml" value="0.22" />
       </map>
     </option>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="titulo_fragments">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">34sp</item>
+
+    </style>
+
+    <style name="roundedCornersImageView" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">10dp</item>
+    </style>
+</resources>
