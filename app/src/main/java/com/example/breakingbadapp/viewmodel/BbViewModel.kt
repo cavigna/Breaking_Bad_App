@@ -13,14 +13,20 @@ class BbViewModel(private val repositorio: Repositorio) : ViewModel(){
 
     val fraseRandom = repositorio.fraseRandom()
 
-    private var _personajeRandom: MutableLiveData<Personaje> = MutableLiveData(Personaje())
+    //private var _personajeRandom: MutableLiveData<Personaje> = MutableLiveData(Personaje())
 
     var terminoAgregarDB = MutableLiveData(false)
 
     //val personajeRandom: LiveData<Personaje> = _personajeRandom
+    var personajeRandom: MutableLiveData<Personaje> =
+        repositorio.personajeRandmom((1..62).random()).asLiveData() as MutableLiveData<Personaje>
+
+
+    /*
     val personajeRandom: LiveData<Personaje> by lazy {
         repositorio.personajeRandmom((1..62).random()).asLiveData()
     }
+     */
 
     val listadoPersonaje = repositorio.listadoPersonajes().asLiveData()
     val listadoPersonaje2 = repositorio.listadoPersonajes()
@@ -52,12 +58,16 @@ class BbViewModel(private val repositorio: Repositorio) : ViewModel(){
 
         viewModelScope.launch(IO) {
             repositorio.agregarDB()
+            personajeRandom.postValue(repositorio.personajeRandmom((1..62).random()).asLiveData().value)
             terminoAgregarDB.postValue(true)
         }
 
     }
 
     fun buscarPersonaje(search:String) =  repositorio.buscarPersonaje(search).asLiveData()
+
+    fun nuevoPersonajeRandom(id:Int)  = repositorio.personajeRandmom(id).asLiveData()
+
 
 
 }

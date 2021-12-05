@@ -26,4 +26,11 @@
 
     </item>
 
+    <item
+        android:id="@+id/episodios_menu"
+        android:icon="@drawable/ic_tv"
+        android:title="@string/episodios">
+
+    </item>
+
 </menu>

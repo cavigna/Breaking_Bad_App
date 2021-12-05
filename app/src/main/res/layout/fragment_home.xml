@@ -19,7 +19,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progess_indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="344dp"
+        android:progress="@integer/material_motion_duration_long_1"
+        android:progressTint="@color/french_beige"
+        app:indicatorColor="@color/alice_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -36,10 +49,10 @@
 
             <ImageView
                 android:id="@+id/image_personaje_home"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
                 android:layout_gravity="center|center_vertical"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 tools:src="@tools:sample/avatars" />
 
             <TextView
