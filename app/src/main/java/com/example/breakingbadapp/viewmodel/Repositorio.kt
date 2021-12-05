@@ -1,5 +1,6 @@
 package com.example.breakingbadapp.viewmodel
 
+import androidx.lifecycle.asLiveData
 import com.example.breakingbadapp.db.BbDao
 import com.example.breakingbadapp.network.ApiService
 
@@ -23,4 +24,7 @@ class Repositorio(private val api: ApiService, private val dao: BbDao) {
     fun listadoPersonajes() = dao.listadoPersonajes()
     fun listadoFrases() = dao.listadoFrases()
     fun listadoMuertes() = dao.listadoMuertes()
+    fun conteoPersonadjes() = dao.cantidadPersonajes()
+
+    fun buscarPersonaje(search: String) = dao.buscarPersonaje(search)
 }

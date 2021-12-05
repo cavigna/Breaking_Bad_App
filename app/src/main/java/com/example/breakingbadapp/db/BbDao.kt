@@ -31,6 +31,11 @@ interface BbDao {
     @Query("SELECT * FROM personajes_tabla where id=:id")
     fun personajeRandom(id: Int): Flow<Personaje>
 
+    @Query("SELECT * FROM personajes_tabla WHERE name LIKE '%' || :search || '%'" +
+            " OR nickname LIKE '%' || :search || '%'" +
+            " OR portrayed LIKE '%' || :search || '%' ")
+    fun buscarPersonaje(search: String): Flow<List<Personaje>>
+
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun agregarListadoEpisodios(listadoFrases : List<Episodio>)
@@ -45,6 +50,9 @@ interface BbDao {
 
     @Query("SELECT * FROM muertes_tabla")
     fun listadoMuertes(): Flow<List<Muertes>>
+
+    @Query("SELECT COUNT(*) from personajes_tabla")
+    fun cantidadPersonajes(): Flow<Int>
 
 
 }
