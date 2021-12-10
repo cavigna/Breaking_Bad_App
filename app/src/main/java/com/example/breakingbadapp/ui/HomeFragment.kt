@@ -67,12 +67,14 @@ class HomeFragment : Fragment() {
                         binding.cardHome.visibility = View.VISIBLE
                         binding.progessIndicator.visibility = View.GONE
 
-                        imagePersonajeHome.load(it.img) {
-                            transformations(RoundedCornersTransformation(10f))
-                        }
-                        tvNombrePersonajeHome.text = it.name
-                        val profesion = it.occupation.joinToString { it }
-                        tvProfesionHome.text = "Profesion: ${profesion}"
+                        try {
+                            imagePersonajeHome.load(it.img) {
+                                transformations(RoundedCornersTransformation(10f))
+                            }
+                            tvNombrePersonajeHome.text = it.name
+                            val profesion = it.occupation.joinToString { it }
+                            tvProfesionHome.text = "Profesion: ${profesion}"
+                        }catch (e: NullPointerException){}
 
 
                     }
@@ -95,12 +97,14 @@ class HomeFragment : Fragment() {
                     binding.cardHome.visibility = View.VISIBLE
                     binding.progessIndicator.visibility = View.GONE
 
-                    imagePersonajeHome.load(it.img) {
-                        transformations(RoundedCornersTransformation(10f))
-                    }
-                    tvNombrePersonajeHome.text = it.name
-                    val profesion = it.occupation.joinToString { it }
-                    tvProfesionHome.text = "Profesion: ${profesion}"
+                    try {
+                        imagePersonajeHome.load(it.img) {
+                            transformations(RoundedCornersTransformation(10f))
+                        }
+                        tvNombrePersonajeHome.text = it.name
+                        val profesion = it.occupation.joinToString { it }
+                        tvProfesionHome.text = "Profesion: ${profesion}"
+                    }catch (e: NullPointerException){}
 
 
                 }
